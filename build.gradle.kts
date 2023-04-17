@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    kotlin("kapt") version "1.8.10"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -17,7 +18,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     compileOnly("com.velocitypowered:velocity-api:3.1.1")
-    annotationProcessor("com.velocitypowered:velocity-api:3.1.1")
+    kapt("com.velocitypowered:velocity-api:3.1.1")
 }
 
 tasks {
