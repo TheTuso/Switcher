@@ -16,7 +16,7 @@ import org.slf4j.Logger
     url = "https://github.com/TheTuso/Switcher",
     description = "A simple Velocity plugin that allows players to join from multiple game profiles using a domain",
     authors = ["tuso"])
-class Switcher @Inject constructor(val proxyServer: ProxyServer, val logger: Logger) {
+class Switcher @Inject constructor(private val proxyServer: ProxyServer, val logger: Logger) {
     lateinit var luckPerms: LuckPerms
 
     init {
