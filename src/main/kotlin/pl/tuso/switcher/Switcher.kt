@@ -26,5 +26,6 @@ class Switcher @Inject constructor(val proxyServer: ProxyServer, val logger: Log
     @Subscribe
     fun onProxyInitialization(initializeEvent: ProxyInitializeEvent) {
         if (proxyServer.pluginManager.isLoaded("luckperms")) luckPerms = LuckPermsProvider.get()
+        proxyServer.eventManager.register(this, SwitchRequestListener(this))
     }
 }
